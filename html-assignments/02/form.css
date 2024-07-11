@@ -1,0 +1,96 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5% 0;
+  background-color: black;
+}
+.main-container .form-container {
+  background-color: white;
+  border-radius: 15px;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.main-container .form-container .dust-class {
+  width: 100%;
+  position: relative;
+}
+.main-container .form-container .dust-class label {
+  display: inline-block;
+  position: absolute;
+  top: -2px;
+  left: 14px;
+  padding: 5px;
+  background: white;
+  font-size: 14px;
+  color: #888;
+  font-weight: bold;
+}
+.main-container .form-container .dust-class label span {
+  color: #da4841;
+  vertical-align: -1px;
+}
+.main-container .form-container .dust-class input {
+  width: 100%;
+  border: 1px solid #dddddd !important;
+  font-size: 1rem;
+  line-height: 1.45;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 12px 0;
+}
+.main-container .form-container .dust-class input::-moz-placeholder {
+  font-size: 14px;
+}
+.main-container .form-container .dust-class input::placeholder {
+  font-size: 14px;
+}
+.main-container .form-container .styled-box {
+  padding: 20px;
+  position: relative;
+  width: 300px;
+  margin: 20px auto;
+}
+.main-container .form-container .styled-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid #333;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+.main-container .form-container .title {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 0 10px;
+}
+.main-container .form-container .button-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 5%;
+}
+.main-container .form-container .button-container button {
+  padding: 4%;
+  outline: 1px solid black;
+  border-radius: 10px;
+}
+.main-container .form-container .button-container button:hover {
+  background-color: black;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+.main-container .white {
+  color: white;
+}/*# sourceMappingURL=form.css.map */

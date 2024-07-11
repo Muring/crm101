@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 탭 이름 -->
+    <title>Homework 1</title>
+
+    <!-- css 파일 임포트 -->
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body class="main-container">
+    <!-- 헤더 -->
+    <nav class="flex-between menu-container">
+      <a class="logo" href="http://127.0.0.1:5500/html/01/home.html">
+        <img src="./assets/steam-logo-white.png" alt="logo" />
+      </a>
+      <ul class="flex-between">
+        <li><a href="">MENU</a></li>
+        <li><a href="">LIBRARY</a></li>
+        <li><a href="">STORE</a></li>
+        <li><a href="">COMMUNITY</a></li>
+        <li><a href="">MY PROFILE</a></li>
+      </ul>
+    </nav>
+
+    <!-- 메인 컨텐츠 -->
+    <div class="content-container">
+      <!-- 첫번째 메인 이미지 -->
+      <div class="img-content">
+        <a href="/">
+          <img src="./assets/main-content.png" alt="" />
+        </a>
+      </div>
+
+      <!-- 공지 뉴스 및 유튜브 영상 -->
+      <div class="flex-between news-container">
+        <!-- 공지 테이블 -->
+        <div class="notice-container">
+          <ul class="notice-menu">
+            <li class="active">특별할인</li>
+            <li>공지사항</li>
+            <li>환불신청</li>
+            <li>FAQ</li>
+          </ul>
+          <ul class="notice-content">
+            <li>[특별할인] 엘든링 dlc, 출시 특가 10% 할인</li>
+            <li>[특별할인] 엘든링 dlc 출시 기념 SE 에디션 20% 할인</li>
+            <li>[특별할인] Helldivers 2 30% 할인</li>
+            <li>[소식] 엄세현이 해당 페이지를 작성했다고 알림</li>
+            <li>[소식] FrostPunk 2 출시일 임박!</li>
+          </ul>
+        </div>
+
+        <!-- 유튜브 영상 -->
+        <div class="video">
+          <iframe
+            src="https://www.youtube.com/embed/IHdTLESFWNU
+            "
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- 두번째 이미지 섹션 -->
+      <div class="img-content">
+        <a href="http://127.0.0.1:5500/html/01/home.html">
+          <img src="./assets/sub-content.png" alt="" />
+        </a>
+      </div>
+
+      <!-- VOC 및 Contact -->
+      <div class="flex-between info-container">
+        <!-- VOC -->
+        <div class="flex-between voc-container">
+          <h1>With VOC</h1>
+          <div class="voc">
+            <div class="flex-between">
+              <label for="phoneNumber">연락처</label>
+              <input type="text" id="phoneNumber" class="custom-input" />
+              <label for="email">이메일 주소</label>
+              <input type="text" id="email" class="custom-input" />
+            </div>
+            <div class="mid flex-between">
+              <label for="title">문의유형</label>
+              <div class="input-container">
+                <label for="shop">매장</label>
+                <input type="checkbox" id="shop" />
+                <label for="title">온라인 몰</label>
+                <input type="checkbox" id="mall" />
+                <label for="etc">기타</label>
+                <input type="checkbox" id="etc" />
+              </div>
+            </div>
+            <div class="flex-between mid">
+              <label for="title">제목</label>
+              <input type="text" id="title" />
+            </div>
+            <div class="flex-between mid">
+              <label for="context">내용</label>
+              <input type="text" id="context" />
+            </div>
+            <button>Submit</button>
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="contact-container">
+          <h1>Contact us</h1>
+          <div class="flex-between info">
+            <div class="map" id="map"></div>
+            <div class="details">
+              <div>
+                <h3>고객센터</h3>
+                <img src="./assets/phone-icon.png" alt="phone" />
+                <p>02-000-0000</p>
+              </div>
+              <div>
+                <img src="./assets/mail-icon.png" alt="mail" />
+                <p>astro@salseforce.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <!-- 푸터 -->
+  <footer>
+    <div class="menu">
+      <a href="">회사 소개</a>
+      <a href="">개인정보처리방침</a>
+      <a href="">게임약관</a>
+      <a href="">사이트맵</a>
+    </div>
+    <p class="address">엄세현이 작성함! 구라아님!</p>
+  </footer>
+
+  <!-- 카카오 지도 -->
+  <script
+    type="text/javascript"
+    src="//dapi.kakao.com/v2/maps/sdk.js?appkey=본인 키 입력하세요"
+  ></script>
+  <script>
+    var mapContainer = document.getElementById("map");
+    var mapOption = {
+      center: new kakao.maps.LatLng(37.484166, 127.035833), // 양재 패스트레인
+      level: 3, // 확대 레벨
+    };
+    var map = new kakao.maps.Map(mapContainer, mapOption);
+  </script>
+</html>

@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  padding: 2%;
+}
+
+.board {
+  border: 1px solid black;
+  width: 400px;
+  height: 300px;
+}
+
+.menu {
+  display: flex;
+  border-bottom: 1px solid black;
+}
+
+.title {
+  padding: 3%;
+}
+
+.highlight {
+  background-color: pink;
+  color: white;
+}
+
+.content-container {
+  width: 100%;
+  height: auto;
+  padding-left: 5%;
+  padding-top: 5%;
+}
+
+.content {
+  padding: 2% 0;
+}
+
+li {
+  list-style: none;
+}
