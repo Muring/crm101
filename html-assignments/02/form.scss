@@ -253,4 +253,8 @@ a:after {
   &::placeholder {
     color: red;
   }
+
+  &:focus {
+    outline: 1px solid red !important;
+  }
 }

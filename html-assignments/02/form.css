@@ -240,4 +240,7 @@ a:after {
 }
 .error::placeholder {
   color: red;
+}
+.error:focus {
+  outline: 1px solid red !important;
 }/*# sourceMappingURL=form.css.map */
