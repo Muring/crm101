@@ -26,10 +26,10 @@ function validateFormData() {
   const agreementsStatus = getAgreementsStatus();
 
   // 유효성 검사
-  // if (!validateUserInfo(userInfo)) return;
-  // if (!validateProductType(productType)) return;
-  // if (!validateOrderAmount(orderAmount)) return;
-  // if (!validateUserAgreement(agreementsStatus)) return;
+  if (!validateUserInfo(userInfo)) return;
+  if (!validateProductType(productType)) return;
+  if (!validateOrderAmount(orderAmount)) return;
+  if (!validateUserAgreement(agreementsStatus)) return;
 
   alert(
     "정상적으로 신청되었습니다.\n\n" +
@@ -161,7 +161,6 @@ function validateOrderAmount(orderAmount) {
 
 function validateUserAgreement(agreementStatus) {
   agreementStatus.forEach((status) => {
-    console.log(`ID: ${status.id}, Checked: ${status.checked}`);
     if (status.id == "privacyAgreement" || status.id == "serviceAgreement") {
       if (status.checked == false) {
         alert("필수 약관에 동의해주세요.");
