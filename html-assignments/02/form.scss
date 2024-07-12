@@ -1,4 +1,5 @@
 .main-container {
+  /* ---------------- 전체 페이지 디자인 ---------------- */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,15 +8,17 @@
   background-color: black;
 
   .form-container {
+    /* ---------------- form 디자인 ---------------- */
     background-color: white;
     border-radius: 15px;
-    padding: 5%;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    width: 500px;
 
-    // ---------------- input 디자인 ----------------
     .dust-class {
+      /* ---------------- input 디자인 ---------------- */
       width: 100%;
       position: relative;
 
@@ -38,10 +41,10 @@
 
       input {
         width: 100%;
-        border: 1px solid #dddddd !important;
+        border: 1px solid #dddddd;
         font-size: 1rem;
         line-height: 1.45;
-        // letter-spacing: 0.04rem;
+        letter-spacing: 0.04rem;
         border-radius: 8px;
         padding: 16px;
         margin: 12px 0;
@@ -52,39 +55,80 @@
       }
     }
 
-    // ----------------- 내부 박스 -----------------
     .styled-box {
+      /* ----------------- 내부 박스 ----------------- */
       padding: 20px;
       position: relative;
-      width: 300px;
-      margin: 20px auto;
-    }
-
-    .styled-box::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      border: 1px solid #333;
       width: 100%;
-      height: 100%;
-      box-sizing: border-box;
-      pointer-events: none;
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #dddddd;
+      border-radius: 10px;
     }
 
-    .title {
+    legend {
       position: absolute;
       top: -10px;
       left: 50%;
       transform: translateX(-50%);
       background-color: white;
       padding: 0 10px;
+      font-family: "NanumSquareNeo";
     }
 
-    // ---------------- 버튼 디자인 ----------------
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      .label-line {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        label {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+      }
+
+      select {
+        /* ---------------- 주문 수량 디자인 ---------------- */
+        width: 30%;
+        height: 50px;
+        padding: 0 3%;
+        border-radius: 8px;
+        border: 1px solid #dddddd;
+
+        &:focus {
+          outline: 1.5px solid gray;
+        }
+      }
+      .amount-input {
+        width: 50%;
+        height: 50px;
+        border: 1px solid #dddddd;
+        font-size: 1rem;
+        line-height: 1.45;
+        letter-spacing: 0.04rem;
+        border-radius: 8px;
+        padding: 0 3%;
+        margin: 12px 0;
+
+        &::placeholder {
+          font-size: 14px;
+        }
+
+        &:disabled {
+          background-color: #eeeeee;
+        }
+      }
+    }
+
     .button-container {
+      /* ---------------- 버튼 디자인 ---------------- */
       display: flex;
       justify-content: space-evenly;
       align-items: center;
@@ -106,5 +150,107 @@
 
   .white {
     color: white;
+    text-shadow: 1px 1px 2px black, 0 0 1em white, 0 0 1em white;
+  }
+}
+
+[type="radio"] {
+  /* ---------------- 라디오 버튼 디자인 ---------------- */
+  appearance: none;
+  border: max(2px, 0.1rem) solid gray;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  transition: all 0.1s ease-in-out;
+
+  &:checked {
+    border: 0.3rem solid black;
+  }
+
+  &:focus-visible {
+    outline: max(2px, 0.1em) dotted tomato;
+    outline-offset: max(2px, 0.1em);
+  }
+
+  &:hover {
+    box-shadow: 0 0 0 max(2px, 0.1em) lightgray;
+    cursor: pointer;
+  }
+
+  &:hover + p {
+    cursor: pointer;
+  }
+}
+
+.flex-col {
+  /* ---------------- 약관 동의 추가 설정 ---------------- */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  label {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    text-align: left;
+    gap: 10px;
+  }
+}
+
+[type="checkbox"] {
+  /* ---------------- 체크 박스 디자인 ---------------- */
+  display: none;
+}
+
+[type="checkbox"] + label {
+  cursor: pointer;
+}
+
+/* label:before에 체크하기 전 상태 CSS */
+[type="checkbox"] + label:before {
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  border: 2px solid #bcbcbc;
+  border-radius: 4px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0 4px 6px 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* label:before에 체크 된 상태 CSS */
+[type="checkbox"]:checked + label:before {
+  content: "✔";
+  background-color: #464646;
+  border-color: #464646;
+  color: white;
+  transition: all 0.2s ease-in-out 1s forward;
+}
+
+a {
+  position: relative;
+  padding-bottom: 3px;
+  align-self: center;
+}
+
+a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.5px;
+  background-color: black;
+}
+
+.error {
+  border: 1px solid red !important;
+  color: red !important;
+
+  &::placeholder {
+    color: red;
   }
 }
