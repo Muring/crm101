@@ -11,6 +11,7 @@ document
     }
   });
 
+// form 자동 새로고침 제거 및 검증 실행
 document
   .getElementById("orderForm")
   .addEventListener("submit", function (event) {
@@ -92,6 +93,7 @@ function getAgreementsStatus() {
   return agreementsStatus ? agreementsStatus : null;
 }
 
+// --------------------- 검증 -----------------
 function validateUserInfo(userInfo) {
   const patterns = {
     userId: {
@@ -172,6 +174,7 @@ function validateUserAgreement(agreementStatus) {
   return true;
 }
 
+// 에디션 상세
 function goDetail() {
   window.location.href = "http://www.google.com";
 }
