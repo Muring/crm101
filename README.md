@@ -37,8 +37,8 @@
 이를 토대로 앞으로 스스로의 한계를 단정짓지 말고 더 많은 기회 및 길을 찾으려고 노력해야겠다.<br>
 고생한 우리 팀원들, 매니저님들, 강사님들, 마지막으로 저희 멘토님!<br>
 모두들 정말 감사했습니다!<br>
-<img src="photos/group01.JPG" alt="group1" width="500">
-<img src="photos/group02.JPG" alt="group2" width="500">
+<img src="photos/group02.JPG" alt="group1" width="500">
+<img src="photos/mentor.JPG" alt="mentor" width="500">
 <img src="photos/boys.JPG" alt="BOYS" width="500">
 <img src="photos/girls.JPG" alt="GIRLS" width="500">
 <img src="photos/all.JPG" alt="ALL">
