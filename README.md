@@ -39,6 +39,6 @@
 모두들 정말 감사했습니다!<br>
 <img src="photos/group01.JPG" alt="group1" width="400">
 <img src="photos/group02.JPG" alt="group2" width="400">
-<img src="photos/all.JPG" alt="ALL" width="400">
 <img src="photos/boys.JPG" alt="BOYS" width="400">
 <img src="photos/girls.JPG" alt="GIRLS" width="400">
+<img src="photos/all.JPG" alt="ALL">
