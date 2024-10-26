@@ -1,0 +1,118 @@
+<template>
+    <lightning-card title="주문 상품 정보" icon-name="standard:product">
+
+        <!-- 기간 선택 -->
+        <div class="section">
+            <h2 class="section-title">기간 선택</h2>
+            <div class="picklist-container">
+                <lightning-combobox 
+                    label="연도 선택"
+                    value={selectedYear}
+                    placeholder="Select Year"
+                    options={yearOptions}
+                    onchange={handleYearChange}>
+                </lightning-combobox>
+            </div>
+
+            <!-- Quarter Buttons -->
+            <template if:true={selectedYear}>
+                <div class="picklist-container quarter-section">
+                    <lightning-button-group>
+                        <lightning-button 
+                            label="1분기 (1-3월)" 
+                            onclick={handleQuarterClick} 
+                            data-quarter="Q1" 
+                            class={q1Class}>
+                        </lightning-button>
+                        <lightning-button 
+                            label="2분기 (4-6월)" 
+                            onclick={handleQuarterClick} 
+                            data-quarter="Q2" 
+                            class={q2Class}>
+                        </lightning-button>
+                        <lightning-button 
+                            label="3분기 (7-9월)" 
+                            onclick={handleQuarterClick} 
+                            data-quarter="Q3" 
+                            class={q3Class}>
+                        </lightning-button>
+                        <lightning-button 
+                            label="4분기 (10-12월)" 
+                            onclick={handleQuarterClick} 
+                            data-quarter="Q4" 
+                            class={q4Class}>
+                        </lightning-button>
+                    </lightning-button-group>
+                </div>
+            </template>
+
+            <!-- Month Buttons -->
+            <template if:true={selectedYear}>
+                <div class="picklist-container month-section">
+                    <lightning-button-group>
+                        <lightning-button label="1월" onclick={handleMonthClick} data-month="1" class={janClass}></lightning-button>
+                        <lightning-button label="2월" onclick={handleMonthClick} data-month="2" class={febClass}></lightning-button>
+                        <lightning-button label="3월" onclick={handleMonthClick} data-month="3" class={marClass}></lightning-button>
+                        <lightning-button label="4월" onclick={handleMonthClick} data-month="4" class={aprClass}></lightning-button>
+                        <lightning-button label="5월" onclick={handleMonthClick} data-month="5" class={mayClass}></lightning-button>
+                        <lightning-button label="6월" onclick={handleMonthClick} data-month="6" class={junClass}></lightning-button>
+                        <lightning-button label="7월" onclick={handleMonthClick} data-month="7" class={julClass}></lightning-button>
+                        <lightning-button label="8월" onclick={handleMonthClick} data-month="8" class={augClass}></lightning-button>
+                        <lightning-button label="9월" onclick={handleMonthClick} data-month="9" class={sepClass}></lightning-button>
+                        <lightning-button label="10월" onclick={handleMonthClick} data-month="10" class={octClass}></lightning-button>
+                        <lightning-button label="11월" onclick={handleMonthClick} data-month="11" class={novClass}></lightning-button>
+                        <lightning-button label="12월" onclick={handleMonthClick} data-month="12" class={decClass}></lightning-button>
+                    </lightning-button-group>
+                </div>
+            </template>
+        </div>
+
+        <!-- 요약 정보 -->
+        <template if:true={selectedYear}>
+            <div class="section">
+                <h2 class="section-title">요약 정보</h2>
+                <div class="divider"></div>
+                <template if:true={summaryData.length}>
+                    <div class="summary-table">
+                        <lightning-datatable 
+                            key-field="id"
+                            data={summaryData}
+                            columns={summaryColumns}
+                            hide-checkbox-column="true">
+                        </lightning-datatable>
+                    </div>
+                </template>
+            </div>
+
+            <!-- 구분선 추가 -->
+            <div class="table-separator"></div>
+
+            <!-- 세부 내역 (사용자에게 보이지 않도록 설정) -->
+            <template if:false={showDetailedSummary}>
+                <div class="section">
+                    <h2 class="section-title">세부 내역</h2>
+                    <div class="divider"></div>
+                    <template if:true={filteredOrders.length}>
+                        <template for:each={filteredOrders} for:item="order">
+                            <div key={order.orderName} class="order-section">
+                                <h2 class="order-header">
+                                    {order.orderName} ({order.effectiveDate})
+                                </h2>
+                                <lightning-datatable 
+                                    key-field="id"
+                                    data={order.orderProducts}
+                                    columns={columns}
+                                    hide-checkbox-column="true">
+                                </lightning-datatable>
+                            </div>
+                        </template>
+                    </template>
+                </div>
+            </template>
+        </template>
+
+        <template if:true={error}>
+            <p class="slds-text-color_error">{error}</p>
+        </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,53 @@
+<template>
+    <lightning-card title="Monthly Orders and Products" icon-name="standard:orders">
+        <div class="slds-p-around_medium">
+            <lightning-combobox label="Select Month" value={selectedMonth} options={monthOptions} onchange={handleMonthChange}></lightning-combobox>
+            <lightning-combobox label="Select Year" value={selectedYear} options={yearOptions} onchange={handleYearChange}></lightning-combobox>
+
+            <template if:true={isLoading}>
+                <lightning-spinner alternative-text="Loading..."></lightning-spinner>
+            </template>
+
+            <template if:true={orders}>
+                <template if:true={orders.length}>
+                    <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                        <thead>
+                            <tr>
+                                <th>Order Name</th>
+                                <th>Product Name</th>
+                                <th>Planned Quantity</th>
+                                <th>Actual Quantity</th>
+                                <th>Sales Price (USD)</th>
+                                <th>Discount Rate (%)</th>
+                                <th>Unit Price (USD)</th>
+                                <th>Planned Amount (USD)</th>
+                                <th>Actual Amount (USD)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <template for:each={orders} for:item="orderWrapper">
+                                <template for:each={orderWrapper.orderProducts} for:item="product">
+                                    <tr key={product.productName}>
+                                        <td>{orderWrapper.order.Name}</td>
+                                        <td>{product.productName}</td>
+                                        <td>{product.plannedQuantity}</td>
+                                        <td>{product.actualQuantity}</td>
+                                        <td>{product.salesPrice}</td>
+                                        <td>{product.discountRate}</td>
+                                        <td>{product.unitPrice}</td>
+                                        <td>{product.plannedAmount}</td>
+                                        <td>{product.actualAmount}</td>
+                                    </tr>
+                                </template>
+                            </template>
+                        </tbody>
+                    </table>
+                </template>
+                <!-- 데이터가 없을 때 메시지 -->
+                <template if:false={orders.length}>
+                    <p>No orders found for the selected month and year.</p>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

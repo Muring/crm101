@@ -1,0 +1,23 @@
+/* 부모 그리드 요소의 스타일 */
+.slds-col {
+    max-width: 100%; /* 부모 컨테이너의 최대 너비를 100%로 설정 */
+    overflow: hidden; /* 컨테이너를 벗어나는 요소 숨김 */
+}
+
+/* Billing 지도 컨테이너 스타일 */
+.billing-map-container {
+    padding-right: 10px; /* Billing 지도 컨테이너의 오른쪽 패딩 */
+}
+
+/* Shipping 지도 컨테이너 스타일 */
+.shipping-map-container {
+    padding-left: 10px; /* Shipping 지도 컨테이너의 왼쪽 패딩 */
+}
+
+/* 지도 스타일 */
+.lightning-map {
+    height: 100%; /* 부모 컨테이너의 높이에 맞춰서 설정 */
+    max-height: 400px; /* 지도의 최대 높이를 400px로 제한 */
+    width: 49%; /* 지도의 너비를 100%로 설정 */
+    overflow: hidden; /* 지도 영역을 벗어나는 부분 숨김 */
+}

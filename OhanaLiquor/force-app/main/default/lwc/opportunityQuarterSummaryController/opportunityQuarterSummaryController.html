@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="연도별 분기 요약 정보" icon-name="standard:report">
+        <!-- 연도 선택 -->
+        <div class="year-selection">
+            <lightning-combobox 
+                label="연도 선택"
+                value={selectedYear}
+                placeholder="연도를 선택하세요"
+                options={yearOptions}
+                onchange={handleYearChange}>
+            </lightning-combobox>
+        </div>
+
+        <!-- 요약 정보 테이블 -->
+        <template if:true={selectedYear}>
+            <div class="summary-table">
+                <lightning-datatable 
+                    key-field="quarter"
+                    data={quarterSummaryData}
+                    columns={columns}
+                    hide-checkbox-column="true">
+                </lightning-datatable>
+            </div>
+        </template>
+
+        <!-- 오류 메시지 -->
+        <template if:true={error}>
+            <p class="slds-text-color_error">{error}</p>
+        </template>
+    </lightning-card>
+</template>

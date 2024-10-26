@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Billing and Shipping Maps" icon-name="utility:location">
+        <div class="slds-grid slds-wrap">
+            <!-- Billing Address 지도 -->
+            <div class="slds-col slds-size_1-of-2 billing-map-container">
+                <lightning-map
+                    map-markers={billingMarkers}
+                    zoom-level="14"
+                    center={billingCenter}
+                    markers-title="Billing Address">
+                </lightning-map>
+            </div>
+
+            <!-- Shipping Address 지도 -->
+            <div class="slds-col slds-size_1-of-2 shipping-map-container">
+                <lightning-map
+                    map-markers={shippingMarkers}
+                    zoom-level="14"
+                    center={shippingCenter}
+                    markers-title="Shipping Address">
+                </lightning-map>
+            </div>
+        </div>
+    </lightning-card>
+</template>

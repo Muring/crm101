@@ -1,0 +1,103 @@
+<template>
+    <!--  ----------------------------------------------------------------------  -->
+    <!--  NOTE: Please add the following <FORM> element to your page.             -->
+    <!--  ----------------------------------------------------------------------  -->
+    
+    <form 
+        action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DdL00000C1hEE" 
+        method="POST"
+        class="form-container"
+        onsubmit={handleSubmit}
+        >
+    
+        <input type=hidden name="oid" value="00DdL00000C1hEE">
+        <input type=hidden name="retURL" value="https://crm1018-dev-ed.develop.my.site.com/ohana/thanks/:term">
+        
+        <!--  ----------------------------------------------------------------------  -->
+        <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+        <!--  these lines if you wish to test in debug mode.                          -->
+        <!--  <input type="hidden" name="debug" value=1>                              -->
+        <!--  <input type="hidden" name="debugEmail" value="esh5218@gmail.com">       -->
+        <!--  ----------------------------------------------------------------------  -->
+        <div class="name-align">
+            <div class="dust-class">
+                <label for="first_name"><span>* </span>이름</label>
+                <input
+                  type="text"
+                  id="first_name"
+                  name="first_name"
+                  placeholder="하나"
+                    oninput={handleInputChange}
+                    value=""
+                />
+            </div>
+            <div class="dust-class">
+                <label for="last_name"><span>* </span>성</label>
+                <input
+                    type="text"
+                    id="last_name"
+                    name="last_name"
+                    placeholder="오"
+                    oninput={handleInputChange}
+                    value=""
+                />
+            </div>
+        </div>
+        <div class="dust-class">
+            <label for="phone"><span>* </span>전화번호</label>
+            <input
+                type="text"
+                id="phone"
+                name="phone"
+                placeholder="01012341234"
+                oninput={handleInputChange}
+                value=""
+            />
+        </div>
+        <div class="dust-class">
+            <label for="email"><span>* </span>이메일</label>
+            <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder="ohana@gmail.com"
+                oninput={handleInputChange}
+                value=""
+            />
+        </div>
+        <div class="dust-class">
+            <label for="company"><span>* </span>회사 이름</label>
+            <input
+                type="text"
+                id="company"
+                name="company"
+                placeholder="오하나주"
+                oninput={handleInputChange}
+                value=""
+            />
+        </div>
+        <div class="content">
+            <div class="picklist-content">
+                <label for="00NdL0000061tWr"><span>* </span>업종유형: </label>
+                <select id="00NdL0000061tWr" name="00NdL0000061tWr" title="업종유형" onchange={handleSelect}>
+                    <option value="" disabled selected>선택</option>
+                    <option value="대형마트">대형마트</option>
+                    <option value="편의점">편의점</option>
+                    <option value="프랜차이즈">프랜차이즈</option>
+                    <option value="개인음식점">개인음식점</option>
+                </select>
+            </div>
+            <div class="submit-container">
+                <div class="error-message" style="display:none; color: red;">제출 실패</div> <!-- 에러 메시지 -->
+                <div class="success-message" style="display:none; color: green;">제출 성공</div> <!-- 에러 메시지 -->
+                <button type="submit" name="formSubmit" class="submit">
+                    <p>등록하기</p>
+                </button>
+            </div>
+        </div>
+        <br>
+    
+    
+    </form>
+    
+</template>

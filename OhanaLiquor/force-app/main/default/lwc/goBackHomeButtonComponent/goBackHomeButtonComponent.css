@@ -1,0 +1,55 @@
+.thanks-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+    padding-top: 10%;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-family: "NanumSquareNeoBold";
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-family: "NanumSquareNeo";
+}
+
+.home-button {
+    padding: 15px;
+    border: 1px solid rgb(61, 231, 95);
+    border-radius: 10px;
+    background-color: white;
+    color: rgb(61, 231, 95);
+}
+
+.home-button:hover {
+    background-color: rgb(61, 231, 95);
+    color: white;
+    transition: 0.3s;
+}
+
+@font-face {
+    font-family: "NanumSquareNeo";
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot);
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot?#iefix)
+        format("embedded-opentype"),
+      url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.woff)
+        format("woff"),
+      url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.ttf)
+        format("truetype");
+  }
+  
+  @font-face {
+    font-family: "NanumSquareNeoBold";
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.eot);
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.eot?#iefix)
+        format("embedded-opentype"),
+      url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.woff)
+        format("woff"),
+      url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.ttf)
+        format("truetype");
+  }

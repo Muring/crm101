@@ -1,0 +1,71 @@
+/* quoteViewer.css */
+/* 개별 Quote 카드 스타일 */
+.quote-card {
+    border: 1px solid #d8dde6;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #ffffff;
+    font-family: 'Orbit', sans-serif; 
+}
+
+/* Quote 카드 헤더 스타일 */
+.quote-header {
+    border-bottom: 1px solid #d8dde6;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Quote 이름 스타일 */
+.quote-header h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* Syncing 라인 스타일 */
+.syncing-line {
+    display: flex;
+    align-items: center;
+}
+
+.syncing-line span {
+    margin-right: 10px;
+}
+
+/* Syncing 체크박스 스타일 */
+.syncing-checkbox {
+    --sds-c-checkbox-color-background: transparent;
+}
+
+/* Quote 본문 스타일 */
+.quote-body {
+    font-size: 0.875rem;
+}
+
+/* 라인 아이템 테이블 스타일 */
+.line-items {
+    width: 100%;
+    margin-top: 0.5rem;
+    border-collapse: collapse;
+}
+
+/* 테이블 셀 스타일 */
+.line-items th, .line-items td {
+    border: 1px solid #d8dde6;
+    padding: 0.25rem;
+    text-align: center;
+}
+
+/* 테이블 헤더 스타일 */
+.line-items th {
+    background-color: #E5EFEA;
+}
+
+/* Quote 푸터 스타일 */
+.quote-footer {
+    margin-top: 0.5rem;
+    border-top: 1px solid #d8dde6;
+    padding-top: 0.5rem;
+    text-align: right;
+    font-weight: bold;
+}

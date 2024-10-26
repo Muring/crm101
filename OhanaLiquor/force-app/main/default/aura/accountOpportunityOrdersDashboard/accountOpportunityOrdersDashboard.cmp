@@ -1,0 +1,19 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global">
+    <!-- LWC 컴포넌트 포함: accountOpportunityOrdersController -->
+    <c:accountOpportunityOrdersController recordId="{!v.recordId}" />
+
+    <!-- 영업 실적 리포트 링크 -->
+    <lightning:card title="영업 실적 리포트">
+        <a href="/lightning/r/Report/00OdL000007BgUXUA0/view" target="_blank">영업 실적 리포트 보기</a>
+    </lightning:card>
+
+    <!-- Account별 Product 주문 현황 리포트 링크 -->
+    <lightning:card title="Account별 Product 주문 현황 리포트">
+        <a href="/lightning/r/Report/00OdL000007VGFlUAO/view" target="_blank">Product 주문 현황 리포트 보기</a>
+    </lightning:card>
+
+    <!-- Account별 Order 리포트 링크 -->
+    <lightning:card title="Account별 Order 리포트">
+        <a href="/lightning/r/Report/00OdL000007NKILUA4/view" target="_blank">Account별 Order 리포트 보기</a>
+    </lightning:card>
+</aura:component>

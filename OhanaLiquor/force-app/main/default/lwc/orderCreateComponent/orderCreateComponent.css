@@ -1,0 +1,79 @@
+/* --------- 전체 오더 컨테이너 --------- */
+.order-container {
+    width: 100%;
+    padding: 0 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* --------- 각 오더 --------- */
+.order-content {
+    width: 48%;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+/* 오더 입력 여부 */
+.order-filled {
+    background-color: rgb(240, 255, 243);
+    border: 1px solid rgb(61, 231, 95);
+}
+.order-not-filled {
+    background-color: rgb(255, 240, 240);
+    border: 1px solid rgb(231, 61, 61);
+}
+
+/* input 태그 */
+.custom-input {
+    width: 100%;
+    border: 1px solid gray; /* 기본 테두리 */
+    border-radius: 5px;
+    padding: 8px;
+    margin: 5px 0;
+    outline: none; /* 기본 outline 제거 */
+}
+.order-not-filled .custom-input:focus {
+    border: 1px solid white;
+    outline: 2px solid rgb(231, 61, 61);
+}
+.custom-input:focus {
+    border: 1px solid white;
+    outline: 2px solid rgb(61, 231, 95); /* 포커스 시 초록색 outline */
+}
+/* 크롬, 사파리, 엣지 등 웹킷 기반 브라우저에서 화살표 제거 */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* 권장 주문량 */
+.recommend {
+    color: gray;
+    font-size: small;
+}
+
+/* --------- 버튼 --------- */
+.button {
+    width: 90%;
+    border: 1px solid rgb(61, 231, 95);
+    border-radius: 10px;
+    background-color: white;
+    color: rgb(61, 231, 95);
+    padding: 10px 0;
+    margin: 0 5%;
+    outline: none;
+}
+.button:hover {
+    background-color: rgb(61, 231, 95);
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+.button:focus {
+    outline: 2px solid rgb(61, 231, 95);
+}
+.button p {
+    font-size: larger;
+}

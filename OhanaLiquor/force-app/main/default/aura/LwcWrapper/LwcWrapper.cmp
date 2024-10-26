@@ -1,0 +1,4 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+    <!-- Visualforce에서 LWC를 포함 -->
+    <c:accountOpportunityOrdersController />
+</aura:component>

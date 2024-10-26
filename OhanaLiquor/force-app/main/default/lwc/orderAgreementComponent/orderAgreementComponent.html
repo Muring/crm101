@@ -1,0 +1,76 @@
+<template>
+    <lightning-card title="Orders by Month or Quarter" icon-name="standard:orders">
+        <div class="slds-p-around_medium">
+            <!-- First Picklist: Select Month or Quarter -->
+            <lightning-combobox 
+                label="Select Type" 
+                value={selectedType} 
+                options={typeOptions} 
+                onchange={handleTypeChange}>
+            </lightning-combobox>
+
+            <!-- Second Picklist: Select Month or Quarter based on type -->
+            <lightning-combobox 
+                label={typeLabel} 
+                value={selectedValue} 
+                options={currentOptions} 
+                onchange={handleValueChange}>
+            </lightning-combobox>
+
+            <lightning-combobox 
+                label="Select Year" 
+                value={selectedYear} 
+                options={yearOptions} 
+                onchange={handleYearChange}>
+            </lightning-combobox>
+
+            <!-- Loading Spinner -->
+            <template if:true={isLoading}>
+                <lightning-spinner alternative-text="Loading..."></lightning-spinner>
+            </template>
+
+            <!-- Orders Table -->
+            <template if:true={orders}>
+                <template if:true={orders.length}>
+                    <div class="table-container">
+                        <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                            <thead>
+                                <tr>
+                                    <th>Order Name</th>
+                                    <th>Product Name</th>
+                                    <th>Planned Quantity</th>
+                                    <th>Actual Quantity</th>
+                                    <th>Sales Price (USD)</th>
+                                    <th>Discount Rate (%)</th>
+                                    <th>Unit Price (USD)</th>
+                                    <th>Planned Amount (USD)</th>
+                                    <th>Actual Amount (USD)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <template for:each={orders} for:item="orderWrapper">
+                                    <template for:each={orderWrapper.orderProducts} for:item="product">
+                                        <tr key={product.productName}>
+                                            <td>{orderWrapper.order.Name}</td>
+                                            <td>{product.productName}</td>
+                                            <td>{product.plannedQuantity}</td>
+                                            <td>{product.actualQuantity}</td>
+                                            <td>{product.salesPrice}</td>
+                                            <td>{product.discountRate}</td>
+                                            <td>{product.unitPrice}</td>
+                                            <td>{product.plannedAmount}</td>
+                                            <td>{product.actualAmount}</td>
+                                        </tr>
+                                    </template>
+                                </template>
+                            </tbody>
+                        </table>
+                    </div>
+                </template>
+                <template if:false={orders.length}>
+                    <p>No orders found for the selected criteria.</p>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

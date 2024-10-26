@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="관련 뉴스" icon-name="custom:custom63">
+        <template if:true={newsData}>
+            <div class="slds-box slds-box_xx-small">
+                <template for:each={newsData} for:item="news">
+                    <div key={news.url} class="slds-m-bottom_small">
+                        <a href={news.url} target="_blank" class="slds-text-link">
+                            <div class="news-item">
+                                <template if:true={news.urlToImage}>
+                                    <img src={news.urlToImage} alt={news.title} class="news-image"/>
+                                </template>
+                                <div class="news-title">{news.title}</div>
+                            </div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </template>
+        <template if:true={error}>
+            <div class="slds-text-color_error">{error}</div>
+        </template>
+        <template if:true={isLoading}>
+            <lightning-spinner alternative-text="Loading"></lightning-spinner>
+        </template>
+    </lightning-card>
+</template>

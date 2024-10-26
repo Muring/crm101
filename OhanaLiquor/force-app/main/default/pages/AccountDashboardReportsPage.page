@@ -1,0 +1,60 @@
+<apex:page showHeader="false" sidebar="false">
+
+    <style>
+        /* 합계를 포함한 특정 요소 숨기기 */
+        .slds-donut-chart__total,
+        .slds-donut-chart__label {
+            display: none !important;  /* 합계 텍스트를 강제로 숨김 */
+        }
+
+        .chart-row {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap; /* 내용이 넘치면 다음 줄로 넘김 */
+            justify-content: space-between; /* 차트 간격 조정 */
+        }
+
+        .chart-container {
+            display: flex;
+            width: 20%;
+            margin-bottom: 20px; /* 아래쪽 여백 추가 */
+        }
+        .chart-container div {
+            width: 100%;
+            max-width: 285px;
+            
+        }
+    </style>
+
+    <div class="chart-row">
+        <!-- 첫 번째 도넛 차트 -->
+        <div class="chart-container" data-scale="0.6">
+            <analytics:reportChart reportId="00OdL000007Ydu9UAC"/>
+        </div>
+
+        <!-- 두 번째 도넛 차트 -->
+        <div class="chart-container" data-scale="0.8">
+            <analytics:reportChart reportId="00OdL000007Xn9BUAS"/>
+        </div>
+
+        <!-- 세 번째 도넛 차트 -->
+        <div class="chart-container" data-scale="0.7">
+            <analytics:reportChart reportId="00OdL000007VGFlUAO"/>
+        </div>
+
+        <!-- 네 번째 도넛 차트 -->
+        <div class="chart-container" data-scale="0.5">
+            <analytics:reportChart reportId="00OdL000007BoezUAC"/>
+        </div>
+    </div>
+
+    <script>
+        // 추가적으로 동적 CSS 조정이 필요한 경우
+        window.onload = function() {
+            document.querySelectorAll('.slds-donut-chart__total, .slds-donut-chart__label')
+                .forEach(element => {
+                    element.style.display = 'none';
+                });
+        };
+    </script>
+</apex:page>

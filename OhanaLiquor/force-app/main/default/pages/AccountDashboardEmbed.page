@@ -1,0 +1,21 @@
+<apex:page >
+
+    <!-- 첫 번째 레포트: Account Name별 Order 현황 -->
+    <h2>Account Name별 Order 현황</h2>
+    <div style="height: 400px; width: 100%;">
+        <analytics:reportChart reportId="00OdL000007Opq9UAC"/>
+    </div>
+
+    <!-- 두 번째 레포트: Account Name별 Order Product 매출현황 -->
+    <h2>Account Name별 Order Product 매출현황</h2>
+    <div style="height: 400px; width: 100%;">
+        <analytics:reportChart reportId="00OdL000007OmbRUAS"/>
+    </div>
+
+    <!-- 세 번째 레포트: Account name에 따른 amount -->
+    <h2>Account name에 따른 amount</h2>
+    <div style="height: 400px; width: 100%;">
+        <analytics:reportChart reportId="00OdL000007F3HhUAK"/>
+    </div>
+
+</apex:page>

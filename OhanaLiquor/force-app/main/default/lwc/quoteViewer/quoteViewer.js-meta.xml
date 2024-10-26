@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <!-- 해당 LWC를 추가할 수 있는 대상 페이지 설정 -->
+        <target>lightning__RecordPage</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage">
+            <objects>
+                <object>Opportunity</object>  <!-- LWC가 나타날 수 있는 특정 객체 페이지 -->
+            </objects>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

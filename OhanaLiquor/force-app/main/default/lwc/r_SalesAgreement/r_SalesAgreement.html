@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Opportunity Order vs Quote Comparison">
+        <div class="slds-m-around_medium">
+            <!-- 검색 필드 -->
+            <lightning-input type="text" label="검색" placeholder="Product Name 입력" onchange={handleSearchChange}></lightning-input>
+
+            <!-- 개월 수 선택 필드 (픽리스트) -->
+            <lightning-combobox 
+                name="monthPicker" 
+                label="개월 수 선택" 
+                value={selectedMonths} 
+                placeholder="개월 수 선택" 
+                options={monthOptions} 
+                onchange={handleMonthsChange}>
+            </lightning-combobox>
+
+            <!-- 테이블 -->
+            <lightning-datatable
+                key-field="id"
+                data={orderProducts}
+                columns={columns}
+                hide-checkbox-column>
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,29 @@
+<apex:component >
+
+    <style>
+        /* 차트 크기를 지정하는 CSS */
+        .chart-container {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+
+    <!-- 첫 번째 레포트: Account Name별 Order 현황 -->
+    <h2>Account Name별 Order 현황</h2>
+    <div class="chart-container">
+        <analytics:reportChart reportId="00OdL000007Opq9UAC"/>
+    </div>
+
+    <!-- 두 번째 레포트: Account Name별 Order Product 매출현황 -->
+    <h2>Account Name별 Order Product 매출현황</h2>
+    <div class="chart-container">
+        <analytics:reportChart reportId="00OdL000007OmbRUAS"/>
+    </div>
+
+    <!-- 세 번째 레포트: Account Name에 따른 Amount -->
+    <h2>Account Name에 따른 Amount</h2>
+    <div class="chart-container">
+        <analytics:reportChart reportId="00OdL000007F3HhUAK"/>
+    </div>
+
+</apex:component>

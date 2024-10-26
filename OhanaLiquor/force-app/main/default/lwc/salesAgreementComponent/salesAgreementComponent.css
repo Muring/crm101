@@ -1,0 +1,9 @@
+.table-container {
+    max-width: 100%;
+    overflow-x: auto; /* 가로 스크롤을 활성화하여 테이블이 너무 커지지 않도록 */
+}
+
+table {
+    table-layout: fixed; /* 테이블 칸 너비를 균등하게 */
+    width: 100%; /* 테이블이 컨테이너 크기에 맞게 조정 */
+}

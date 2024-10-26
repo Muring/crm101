@@ -1,0 +1,128 @@
+/* 분기별 요약 정보 섹션의 텍스트를 크고 진하게 */
+.summary-section {
+    font-size: 1.5rem; /* 텍스트 크기를 크게 설정 */
+    font-weight: bold; /* 텍스트를 진하게 설정 */
+    padding: 20px; /* 섹션 내부 여백을 넉넉하게 설정 */
+    margin-bottom: 20px; /* 섹션 아래쪽에 여백 추가 */
+}
+
+/* 데이터 박스 스타일 */
+.data-box {
+    width: 100%; /* 데이터 박스가 가득 차도록 설정 */
+    padding: 10px; /* 상하좌우에 적절한 내부 여백 추가 */
+    margin: 10px 0; /* 데이터 박스 간의 상하 여백 추가 */
+    box-sizing: border-box; /* 박스 모델이 내부 패딩을 포함하도록 설정 */
+    border: 1px solid #d8dde6; /* 테두리 추가 */
+    border-radius: 5px; /* 모서리를 둥글게 처리 */
+}
+
+/* 데이터 박스 내부 텍스트 스타일 */
+.data-box .data-text {
+    font-size: 1.25rem; /* 내부 텍스트 크기를 적당히 크게 설정 */
+    font-weight: bold; /* 텍스트를 진하게 설정 */
+    color: #333; /* 가시성을 높이기 위한 진한 색상 */
+}
+
+
+
+.order-header {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Picklist container padding */
+.picklist-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px; /* 각 섹션의 버튼 그룹 간 여백을 추가 */
+}
+
+/* 멀티 선택 박스 크기 조정 */
+.picklist-container .slds-dueling-list {
+    max-width: 300px; /* 너비 제한 */
+}
+
+.picklist-container .slds-dueling-list__options {
+    max-height: 200px; /* 높이 제한 */
+    overflow-y: auto; /* 내용이 넘치면 스크롤 */
+}
+
+/* 내부 선택 박스 크기 조정 */
+.picklist-container .slds-dueling-list__column {
+    max-width: 300px;
+}
+
+.picklist-container .slds-dueling-list__column .slds-dueling-list__options {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* 픽리스트와 월별 데이터 테이블 사이의 거리 추가 및 구분선 */
+.table-separator {
+    margin-top: 20px; /* 위쪽에 20px의 공간 추가 */
+    border-top: 2px solid #d8dde6; /* 2px 두께의 연한 회색 선 추가 */
+    padding-top: 20px; /* 구분선 아래에 추가적인 20px 여백 */
+}
+
+/* 활성화된 버튼 스타일 */
+.active {
+    background-color: #0070d2; /* 버튼이 활성화되었을 때 파란색 배경 */
+    color: white; /* 텍스트 색상 변경 */
+    border: 2px solid #0070d2; /* 활성화된 상태에서 테두리 색상을 파란색으로 설정 */
+    box-shadow: 0 0 10px rgba(0, 112, 210, 0.5); /* 클릭 시 부드러운 그림자 효과 추가 */
+}
+
+/* 비활성화된 버튼 스타일 */
+.disabled {
+    background-color: #f4f4f4; /* 비활성화된 버튼의 배경색 */
+    color: #999; /* 비활성화된 버튼의 텍스트 색상 */
+    border: 1px solid #d8dde6; /* 기본 테두리 색상 설정 */
+    cursor: not-allowed; /* 클릭 불가 마우스 커서 표시 */
+    opacity: 0.6; /* 불투명도 설정으로 시각적 강조 */
+}
+
+/* 섹션 간 여백을 위한 스타일 추가 */
+.section {
+    margin-bottom: 40px; /* 아래쪽 여백을 40px로 추가 */
+    padding: 20px; /* 내부 패딩을 20px로 추가 */
+    border: 1px solid #e0e0e0; /* 연한 테두리를 추가하여 시각적으로 구분 */
+    border-radius: 8px; /* 모서리를 둥글게 처리 */
+    background-color: #f9f9f9; /* 약간의 배경색 추가 */
+}
+
+/* 섹션 제목 스타일 (적당한 크기로 줄이기) */
+.section-title {
+    font-size: 1.25rem; /* 제목 크기를 적당하게 줄임 */
+    font-weight: bold; /* 굵은 글씨로 강조 */
+    color: #333; /* 진한 색상으로 가시성 높이기 */
+    margin-top: 10px; /* 제목 위쪽 여백 추가 */
+    margin-bottom: 10px; /* 제목 아래에 여백 추가 */
+    border-bottom: 1px solid #d8dde6; /* 제목 아래 구분선을 얇게 추가 */
+    padding-bottom: 5px; /* 구분선과 제목 간 여백 */
+}
+
+
+/* 구분선 스타일 */
+.divider {
+    height: 2px;
+    background-color: #d8dde6;
+    margin: 20px 0;
+}
+
+/* 요약 정보와 세부 내역 섹션 간 여백 추가 */
+.summary-table,
+.order-section {
+    margin-top: 20px; /* 각 데이터 테이블과 다른 요소들 간의 여백을 추가 */
+}
+
+/* Total 행 스타일링 */
+.total-row {
+    font-weight: bold;
+    background-color: #f0f8ff; /* 연한 파란색 배경 */
+    border-top: 2px solid #0070d2; /* 테두리 색상 추가 */
+}
+
+.negative-value {
+    color: red; /* 음수일 경우 빨간색으로 표시 */
+}

@@ -1,0 +1,21 @@
+/* 부모 컨테이너 스타일 */
+.map-container {
+    display: flex;          /* 두 지도를 가로로 배치 */
+    justify-content: space-between; /* 지도 사이 공간 확보 */
+    gap: 5px;
+    padding: 10px;          /* 부모 컨테이너 여백 */
+}
+
+/* 각 지도 항목 스타일 */
+.map-item {
+    flex: 1;                /* 두 지도가 균등한 크기 */
+    max-height: 300px;          /* 지도 높이 설정 */
+    width: 45%;
+    overflow: hidden;
+}
+
+/* lightning-map 컴포넌트의 크기를 설정 */
+.map-item lightning-map {
+    height: 100%;           /* 부모 높이에 맞게 설정 */
+    width: 100%;            /* 부모 너비에 맞게 설정 */
+}

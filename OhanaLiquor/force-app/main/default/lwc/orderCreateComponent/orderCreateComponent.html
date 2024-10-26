@@ -1,0 +1,30 @@
+<template>
+    <lightning-card>
+        <lightning-spinner if:true={isLoading}></lightning-spinner>
+        <template if:true={products.length}>
+            <div class="order-container">
+                <template for:each={products} for:item="product" >
+                    <div key={product.Id} class="order-content">
+                        <p class="product-name">{product.Product2.Name}</p>
+                        <input
+                            type="text"
+                            data-id={product.Id}
+                            name={product.PricebookEntryId}
+                            placeholder={product.recommendedQuantity}
+                            onchange={handleQuantityChange}
+                            onfocus={handleOnFocus}
+                            onblur={handleQuantityFilled}
+                            class="custom-input"
+                        />
+                        <p class="recommend">권장 주문량 {product.recommendedQuantity}병</p> <!-- 권장 주문량 표시 -->
+                    </div>
+                </template>
+            </div>
+            
+            <button onclick={handleSubmit} class="button"><p>신규 주문 생성</p></button>
+        </template>
+        <template if:false={products.length}>
+            <p>No products found for this Opportunity.</p>
+        </template>
+    </lightning-card>
+</template>

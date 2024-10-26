@@ -1,0 +1,157 @@
+@charset "UTF-8";
+.form-container {
+  /* ---------------- form 디자인 ---------------- */
+  border-radius: 15px;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+}
+  /* ---------------- input 디자인 ---------------- */
+.form-container .dust-class {
+  width: auto;
+  position: relative;
+}
+.dust-class label {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  left: 14px;
+  padding: 0 5px;
+  background: white;
+  font-size: 14px;
+  color: #888;
+  font-weight: bold;
+}
+.dust-class label span {
+  color: #da4841;
+  vertical-align: -1px;
+}
+.dust-class input {
+  width: 100%;
+  border: 1px solid #dddddd;
+  font-size: 1rem;
+  line-height: 1.45;
+  letter-spacing: 0.04rem;
+  border-radius: 8px;
+  padding: 8px;
+  margin: 12px 0;
+  outline: none;
+}
+.dust-class input:focus {
+    outline: 1.5px solid rgb(61, 231, 95);
+}
+.dust-class input::-moz-placeholder {
+  font-size: 14px;
+}
+.dust-class input::placeholder {
+  font-size: 14px;
+}
+
+/* ----------------- 내부 박스 ----------------- */
+.styled-box {
+  padding: 20px;
+  position: relative;
+  width: 100%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+}
+legend {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 0 10px;
+  font-family: "NanumSquareNeo";
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* ---------------- 업종 유형 선택 디자인 ---------------- */
+.picklist-content {
+  display: flex;
+  align-items: center;
+  min-width: 210px;
+}
+.picklist-content span {
+  color: #da4841;
+  vertical-align: -1px;
+}
+select {
+  width: 120px;
+  height: 40px;
+  padding: 0 3%;
+  margin-left: 2%;
+  border-radius: 8px;
+  border: 1px solid #dddddd;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url("/select-arrow-icon.png") no-repeat right 12px center;
+  background-size: 16px;
+  outline: none;
+}
+select:focus {
+    outline: 1.5px solid rgb(61, 231, 95);
+}
+select:hover {
+  cursor: pointer;
+}
+select option {
+  color: black !important;
+}
+
+/* ---------------- 버튼 디자인 ---------------- */
+.submit-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  justify-content: right;
+  align-items: center;
+}
+.submit {
+  width: 90px;
+  padding: 2.5%;
+  margin-left: 2%;
+  border: 1px solid rgb(61, 231, 95);
+  border-radius: 10px;
+  background-color: white;
+}
+.submit:hover {
+  background-color: rgb(61, 231, 95);
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.error {
+  border: 1px solid red !important;
+  color: red !important;
+}
+.error::-moz-placeholder {
+  color: red;
+}
+.error::placeholder {
+  color: red;
+}
+.error:focus {
+  outline: 1px solid red !important;
+}
+
+.name-align {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.name-align .dust-class {
+    width: 48%;
+}

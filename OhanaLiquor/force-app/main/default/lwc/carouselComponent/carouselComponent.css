@@ -1,0 +1,68 @@
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    transition: transform 0.5s ease-in-out; /* 슬라이드 전환 애니메이션 */
+}
+
+.carousel-item img {
+    width: 100%;
+    display: none;
+}
+
+.active img {
+    display: block;
+    height: 480px;
+    object-fit: cover;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* 왼쪽으로 슬라이드 애니메이션 */
+@keyframes slideLeft {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* 오른쪽으로 슬라이드 애니메이션 */
+@keyframes slideRight {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* 애니메이션을 적용할 때의 클래스 */
+.carousel-item.active-slide-left {
+    animation: slideLeft 0.5s ease-in-out;
+}
+
+.carousel-item.active-slide-right {
+    animation: slideRight 0.5s ease-in-out;
+}

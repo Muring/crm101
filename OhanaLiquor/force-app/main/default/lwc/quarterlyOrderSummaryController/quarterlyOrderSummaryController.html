@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Quarterly Order Summary" icon-name="standard:report">
+        <!-- 연도 선택 콤보박스 -->
+        <lightning-combobox 
+            label="연도 선택"
+            value={selectedYear}
+            options={yearOptions}
+            onchange={handleYearChange}>
+        </lightning-combobox>
+
+        <!-- 분기별 요약 데이터 테이블 -->
+        <template if:true={quarterlySummaryData}>
+            <lightning-datatable
+                key-field="quarter"
+                data={quarterlySummaryData}
+                columns={columns}>
+            </lightning-datatable>
+        </template>
+
+        <!-- 에러 메시지 -->
+        <template if:true={error}>
+            <p class="slds-text-color_error">{error}</p>
+        </template>
+    </lightning-card>
+</template>

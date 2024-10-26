@@ -1,0 +1,15 @@
+.news-item {
+    display: flex;
+    align-items: center;
+}
+.news-image {
+    width: 100px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+.news-title {
+    font-size: 14px;
+    font-weight: bold;
+}

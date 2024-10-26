@@ -1,0 +1,143 @@
+/* 데이터 박스를 감싸는 외부 틀 */
+.data-container {
+    border: 2px solid #d8dde6;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 35px; /* 상단 여백을 더 크게 추가 */
+}
+
+/* 분기별 요약 정보와 Opportunities 사이의 구분선 */
+.separator {
+    border-top: 2px solid #d8dde6; /* 구분선 추가 */
+    margin-top: 20px; /* 구분선 위쪽 여백 */
+    margin-bottom: 20px; /* 구분선 아래쪽 여백 */
+}
+
+/* 데이터 테이블의 가로 길이를 제한 */
+.small-datatable {
+    max-width: 800px; /* 최대 너비를 800px로 설정 */
+    width: 100%; /* 부모 요소에 맞게 너비 설정 */
+    margin: 0 auto; /* 중앙 정렬 */
+    overflow-x: auto; /* 내용이 넘치면 가로 스크롤 추가 */
+    border-collapse: collapse;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 테이블 셀 스타일 조정 */
+.lightning-datatable tbody td {
+    padding: 8px; /* 셀 간격을 적당히 조정 */
+    text-align: center;
+    border-right: 1px solid #e0e0e0;
+}
+
+/* 테이블 헤더 스타일 */
+.lightning-datatable thead th {
+    padding: 8px; /* 테이블 헤더 간격을 줄임 */
+    text-align: center;
+    border-bottom: 2px solid #005bb5;
+}
+
+
+/* 분기별 요약 정보 섹션의 크기 및 하단 여백 추가 */
+.summary-section {
+    font-size: 1.5rem; /* 텍스트 크기를 크게 유지 */
+    font-weight: bold; /* 텍스트를 진하게 유지 */
+    padding: 15px; /* 내부 패딩을 줄여 전체 크기를 축소 */
+    margin-bottom: 30px; /* 하단 여백을 30px으로 설정 */
+    width: 90%; /* 박스 너비를 조금 줄여 90%로 설정 */
+}
+
+
+
+
+/* 데이터 박스 내부 텍스트 스타일 */
+.data-box .data-text {
+    font-size: 1.25rem; /* 내부 텍스트 크기를 적당히 크게 설정 */
+    font-weight: bold; /* 텍스트를 진하게 설정 */
+    color: #333; /* 가시성을 높이기 위한 진한 색상 */
+}
+
+.small-datatable {
+    width: 100%; /* 테이블이 컨테이너에 맞게 크기를 조정 */
+    max-width: 300px; /* 최대 크기는 300px로 제한 */
+    font-size: 0.75rem;
+    margin: 0 auto;
+    border-collapse: collapse;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* 마우스를 올리면 배경색을 밝게 변경 */
+.quarter-summary:hover {
+    background-color: #f0f8ff;
+}
+
+/* 클릭 시 약간의 효과 */
+.quarter-summary:active {
+    background-color: #e0f0ff;
+}
+
+
+
+
+h2 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #0070d2;
+    text-align: center;
+}
+
+/* 초과 달성률이 0보다 클 때(양수) 파란 색 적용 */
+.positive-achievement {
+    color: blue;
+    font-weight: bold;
+}
+
+/* 초과 달성률이 0보다 작을 때(음수) 빨간 색 적용 */
+.negative-achievement {
+    color: red;
+    font-weight: bold;
+}
+
+/* 초과 달성률이 0일 때 검정색 적용 */
+.neutral-achievement {
+    color: black;
+    font-weight: bold;
+}
+
+.lightning-datatable .slds-cell-edit {
+    padding: 0.3rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* 초과 달성률에 따른 배경색 설정 */
+.lightning-datatable .slds-cell-edit.positive-achievement {
+    background-color: #e0f7fa;
+}
+
+.lightning-datatable .slds-cell-edit.negative-achievement {
+    background-color: #ffebee;
+}
+
+
+/* 테이블 셀 스타일 */
+.lightning-datatable tbody td {
+    padding: 3px;
+    text-align: center;
+    border-right: 1px solid #e0e0e0;
+}
+
+/* 마지막 셀의 구분선 제거 */
+.lightning-datatable tbody td:last-child {
+    border-right: none;
+}
+
+/* Total 행 강조 스타일 */
+.total-row {
+    font-weight: bold;
+    background-color: #f0f8ff;
+    border-top: 2px solid #0070d2;
+}

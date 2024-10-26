@@ -1,0 +1,77 @@
+<!-- quoteViewer.html -->
+<template>
+    <!-- 전체 Quote 목록을 감싸는 카드 컴포넌트 -->
+    <lightning-card icon-name="standard:quote">
+        <!-- 3열 그리드 레이아웃 구성 -->
+        <div class="slds-grid slds-gutters slds-wrap">
+            <!-- 각 Quote에 대한 반복 -->
+            <template for:each={quotes} for:item="quote">
+                <!-- 각 Quote를 2개를 하나의 열에 배치 -->
+                <div key={quote.quoteNumber} class="slds-col slds-size_1-of-2 slds-p-around_small">
+                    <!-- 개별 Quote 카드 -->
+                    <div class="quote-card">
+                        <!-- Quote 헤더: 견적서 이름과 번호 -->
+                        <div class="quote-header">
+                            <h2> 
+                                <a onclick={navigateToQuoteURL} data-id={quote.quoteId}>
+                                    {quote.quoteName}
+                                </a>
+                            </h2>
+                            <!-- <p>Debug - Quote ID: {quote.quoteId}</p> -->
+                            <p>견적서 번호: {quote.quoteNumber}</p>
+                        </div>
+                        <!-- Quote 본문 -->
+                        <div class="quote-body">
+                            <!-- Syncing 상태 체크박스 -->
+                            <p class="syncing-line">
+                                <span>Syncing :</span>
+                                <lightning-input type="checkbox" checked={quote.isSyncing} disabled class="syncing-checkbox"></lightning-input>
+                            </p>
+                            <!-- 견적서 상태 -->
+                            <p>견적서 상태: <strong>{quote.status}</strong></p>
+                            <!-- 담당자 -->
+                            <p>담당자:&nbsp;
+                                <a onclick={navigateToContactURL} data-id={quote.contactId}>
+                                    <strong>{quote.contactName}</strong>
+                                </a>
+                            </p>
+                            <!-- 만료일 -->
+                            <p>만료 일자: <strong>{quote.expirationDate}</strong></p>
+
+                            <!-- 라인 아이템 테이블 -->
+                            <table class="line-items">
+                                <thead>
+                                    <tr>
+                                        <th>제품 이미지</th>
+                                        <th>물품명</th>
+                                        <th>단가</th>
+                                        <th>수량</th>
+                                        <th>할인율</th>
+                                        <th>할인 적용 금액</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- 각 라인 아이템에 대한 반복 -->
+                                    <template for:each={quote.lineItems} for:item="item">
+                                        <tr key={item.productName}>
+                                            <td><img src={item.productImageUrl} alt={item.productName} width="100" height="100"/></td>
+                                            <td>{item.productName}</td>
+                                            <td>{item.formattedUnitPrice}</td>
+                                            <td>{item.formattedQuantity}</td>
+                                            <td>{item.discount}%</td>
+                                            <td>{item.formattedTotalPrice}</td>
+                                        </tr>
+                                    </template>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Quote 푸터: 총 금액 -->
+                        <div class="quote-footer">
+                            <p>합계 금액: {quote.formattedTotalPrice}</p>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

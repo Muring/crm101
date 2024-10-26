@@ -1,0 +1,41 @@
+<template>
+    <div class="account-opportunity-orders-wrapper">
+
+        <!-- Q0 요약 정보 테이블 -->
+        <div class="data-container"> <!-- 데이터 박스를 감싸는 외부 틀 -->
+            <div class="quarter-summary">
+                <h2 onclick={handleDivClick}>분기별 요약 정보</h2>
+                <lightning-datatable
+                    key-field="contractId"
+                    data={totalSummaryForAllQuarters}
+                    columns={summaryColumns}
+                    hide-checkbox-column="true"
+                    class="small-datatable"
+                >
+                </lightning-datatable>
+            </div>
+        </div>
+
+        <!-- 구분선만 남김 -->
+        <div class="separator"></div>        
+
+        <!-- 분기별 요약 정보 테이블 -->
+        <template for:each={quarterSummaryArray} for:item="quarter">
+            <div key={quarter.key} class="data-container"> <!-- key 속성 추가 -->
+                <div class="quarter-summary">
+                    <!-- h2 태그에만 클릭 이벤트 적용 -->
+                    <h2 onclick={handleOpportunityClick}>{quarter.key} 초과 달성률</h2>
+                    <lightning-datatable
+                        key-field="contractId"
+                        data={quarter.data}
+                        columns={summaryColumns}
+                        hide-checkbox-column="true"
+                        class="small-datatable"
+                    >
+                    </lightning-datatable>
+                </div>
+            </div>
+        </template>
+
+    </div>
+</template>
