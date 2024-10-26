@@ -12,21 +12,21 @@
 <br>
 
 아무튼! 우리 최고 짱짱 PM이 발표를 하시고 발표는 성공적으로 끝났다.<br>
-<img src="photos/project01.JPG" alt="presentation1" width="400">
-<img src="photos/project02.JPG" alt="presentation2" width="400">
+<img src="photos/project01.JPG" alt="presentation1" width="500">
+<img src="photos/project02.JPG" alt="presentation2" width="500">
 <br>
 
 이후, Q&A를 진행하는 모습이다.<br>
-<img src="photos/project07.JPG" alt="Q_A1" width="400">
-<img src="photos/project09.JPG" alt="Q_A2" width="400">
+<img src="photos/project07.JPG" alt="Q_A1" width="500">
+<img src="photos/project09.JPG" alt="Q_A2" width="500">
 <br>
 
 그리고 결과는 무려 우수상!<br>
 살면서 처음 받아보는 프로젝트 수상이어서 더 감명깊었던 것 같다.<br>
 4명으로 프로젝트를 하게 되어 고생한 우리 팀원들 너무 고생했어요!!<br>
 프로젝트 이렇게 했으니 우리 모두 취직해서 만나자!ㅋㅋㅋㅋ<br>
-<img src="photos/reward01.JPG" alt="reward1" width="400">
-<img src="photos/reward02.JPG" alt="reward2" width="400">
+<img src="photos/reward01.JPG" alt="reward1" width="500">
+<img src="photos/reward02.JPG" alt="reward2" width="500">
 <br>
 
 ## 소감
@@ -37,8 +37,8 @@
 이를 토대로 앞으로 스스로의 한계를 단정짓지 말고 더 많은 기회 및 길을 찾으려고 노력해야겠다.<br>
 고생한 우리 팀원들, 매니저님들, 강사님들, 마지막으로 저희 멘토님!<br>
 모두들 정말 감사했습니다!<br>
-<img src="photos/group01.JPG" alt="group1" width="400">
-<img src="photos/group02.JPG" alt="group2" width="400">
-<img src="photos/boys.JPG" alt="BOYS" width="400">
-<img src="photos/girls.JPG" alt="GIRLS" width="400">
+<img src="photos/group01.JPG" alt="group1" width="500">
+<img src="photos/group02.JPG" alt="group2" width="500">
+<img src="photos/boys.JPG" alt="BOYS" width="500">
+<img src="photos/girls.JPG" alt="GIRLS" width="500">
 <img src="photos/all.JPG" alt="ALL">
